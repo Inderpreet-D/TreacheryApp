@@ -1,0 +1,28 @@
+{% extends "_layout.html" %}
+
+{% block main_content %}
+    <div class="form-container">
+        <form action="" method="POST" class="main-form">
+            <h1>Create Room</h1>
+
+            <label for="num_players">Select number of players</label>
+            <select name="num_players" id="num_players" class="form-control">
+                <option selected>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </select>
+
+            <label for="rarity">Select rarity</label>
+            <select name="rarity" id="rarity" class="form-control">
+                <option selected>Uncommon</option>
+                <option>Rare</option>
+                <option>Mythic</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary join-button">Create Room</button>
+            <div style="clear:both;"></div>
+        </form>
+    </div>
+{% endblock %}

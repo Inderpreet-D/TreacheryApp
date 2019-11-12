@@ -1,0 +1,112 @@
+body {
+    color: #222;
+    margin: 0;
+    padding: 0;
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    background-color: #5d3562;
+}
+
+.main_content {
+    background: #500b62;
+    margin: 0;
+    padding: 0 0 50px;
+}
+
+.form-control {
+    display: inline-block;
+    border-radius: 2px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: #2495f2;
+}
+
+.page-core {
+    padding: 20px;
+}
+
+.form-container {
+    padding: 50px;
+}
+
+form.main-form h1 {
+    text-align: center;
+}
+
+form.main-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
+    background-color: #84858b;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.button-row {
+    text-align: center;
+}
+
+.button-row > button {
+    margin: 7px;
+}
+
+.player {
+    padding: 10px;
+}
+
+.join-button {
+    float: right;
+    margin-top: 10px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.player {
+    border: 1px solid #34625f;
+    background-color: #2495f2;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.error {
+    text-align: center;
+    color: #850010;
+    padding: 10px;
+}
+
+.card-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-image-container {
+    margin: 0 10px 10px 10px;
+}
+
+.role-description {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #79bdbe;
+    background-color: #3d3b2a;
+    color: #d2d2d2;
+}

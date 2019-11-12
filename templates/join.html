@@ -1,0 +1,18 @@
+{% extends "_layout.html" %}
+
+{% block main_content %}
+    <div class="form-container">
+        <form action="" method="POST" class="main-form">
+            <h1>Join Room</h1>
+
+            <input name="room_code" minlength="4" maxlength="4" type="text" placeholder=" Enter room code"
+                   class="form-control"
+                   value="{{ room_code }}" required>
+
+            <button type="submit" class="btn btn-primary join-button">Join Room</button>
+            <div style="clear:both;"></div>
+
+            <div class="error">{{ error }}</div>
+        </form>
+    </div>
+{% endblock %}

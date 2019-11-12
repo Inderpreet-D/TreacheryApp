@@ -1,0 +1,37 @@
+{% extends "_layout.html" %}
+
+{#{% block additional_css %}#}
+{#    <meta http-equiv="refresh" content="10">#}
+{#{% endblock %}#}
+
+{% block main_content %}
+    <div class="form-container">
+        <form action="" method="POST" class="main-form">
+            <h1>Room: {{ room_code }}</h1>
+            <h1><span id="num_player">{{ num_players }}</span> / <span id="room_size">{{ room_size }}</span></h1>
+        </form>
+    </div>
+{% endblock %}
+
+{% block additional_js %}
+    <script type="application/javascript">
+        function requestInfo() {
+            $.ajax({
+                url: '/room/refresh?code=' + window.location.pathname,
+                success: function (data) {
+                    $('#num_player').text(data.num_players);
+                    $('#room_size').text(data.room_size);
+                    if (data.done) {
+                        window.location.reload();
+                    }
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            setInterval(function () {
+                requestInfo();
+            }, 1000);
+        });
+    </script>
+{% endblock %}
