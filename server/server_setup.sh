@@ -79,4 +79,4 @@ service nginx restart
 
 add-apt-repository ppa:certbot/certbot
 apt install python-certbot-nginx
-certbot --nginx -d treachery-app.com
+certbot --nginx -d treachery-mtg.ca
