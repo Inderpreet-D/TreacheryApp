@@ -53,15 +53,15 @@ cd /apps
 git clone https://github.com/DragynSlayr/TreacheryApp.git app_repo
 
 # Setup the web app:
-cd cd /apps/app_repo/Treachery/
+cd /apps/app_repo/Treachery/
 pip install -r requirements.txt
 
 # Copy and enable the daemon
-cp /apps/app_repo/Treachery/server/treachery.service /etc/systemd/system/treachery.service
+cp /apps/app_repo/server/treachery.service /etc/systemd/system/treachery.service
 
-systemctl start pypi
-systemctl status pypi
-systemctl enable pypi
+systemctl start treachery
+systemctl status treachery
+systemctl enable treachery
 
 # Setup the public facing server (NGINX)
 apt install nginx
@@ -69,7 +69,7 @@ apt install nginx
 # CAREFUL HERE. If you are using default, maybe skip this
 rm /etc/nginx/sites-enabled/default
 
-cp /apps/app_repo/Treachery/server/treachery.nginx /etc/nginx/sites-enabled/treachery.nginx
+cp /apps/app_repo/server/treachery.nginx /etc/nginx/sites-enabled/treachery.nginx
 update-rc.d nginx enable
 service nginx restart
 
