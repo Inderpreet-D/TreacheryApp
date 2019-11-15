@@ -1,38 +1,36 @@
+/* All pages */
 body {
+    background: #500b62;
+}
+
+.main-content {
     color: #222;
-    margin: 0;
-    padding: 0;
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
     font-size: 17px;
-    background-color: #5d3562;
+    position: relative;
+    min-height: 90vh;
 }
 
-.main_content {
-    background: #500b62;
-    margin: 0;
-    padding: 0 0 50px;
+.footer {
+    color: white;
+    text-align: center;
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
 }
 
+.footer > a {
+    color: #2495f2;
+}
+
+/* Forms only */
 .form-control {
     display: inline-block;
     border-radius: 2px;
     font-size: 20px;
     margin-top: 5px;
-}
-
-footer {
-    margin-top: 50px;
-    padding: 30px;
-    text-align: center;
-    color: white;
-}
-
-footer a {
-    color: #2495f2;
-}
-
-.page-core {
-    padding: 20px;
 }
 
 .form-container {
@@ -48,7 +46,7 @@ form.main-form {
     margin-right: auto;
     max-width: 350px;
     background-color: #84858b;
-    border: 1px solid gray;
+    border: 2px solid white;
     border-radius: 5px;
     padding: 10px;
 }
@@ -61,7 +59,9 @@ form.main-form {
     margin: 7px;
 }
 
-.player {
+.error {
+    text-align: center;
+    color: #850010;
     padding: 10px;
 }
 
@@ -74,20 +74,7 @@ label {
     margin-top: 10px;
 }
 
-.player {
-    border: 1px solid #34625f;
-    background-color: #2495f2;
-    border-radius: 20px;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-.error {
-    text-align: center;
-    color: #850010;
-    padding: 10px;
-}
-
+/* For cards */
 .card-container {
     text-align: center;
     margin-top: 10px;
