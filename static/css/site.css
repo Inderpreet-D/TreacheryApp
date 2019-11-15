@@ -61,8 +61,10 @@ form.main-form {
 
 .error {
     text-align: center;
-    color: #850010;
+    color: #bf0018;
     padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .join-button {

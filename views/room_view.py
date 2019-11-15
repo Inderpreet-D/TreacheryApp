@@ -9,7 +9,11 @@ blueprint = Blueprint('room', __name__)
 @blueprint.route('/room/<room_code>')
 @response(template_file='room.html')
 def room_get(room_code):
-    room_size, num_players = room_service.get_room_stats(room_code)
+    stats = room_service.get_room_stats(room_code)
+    if not stats:
+        return redirect('/join')
+
+    room_size, num_players = stats
 
     if num_players == room_size:
         return redirect('/card')

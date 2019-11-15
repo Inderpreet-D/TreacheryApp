@@ -43,9 +43,12 @@ def get_room_by_code(room_code: str) -> Optional[Room]:
     return room
 
 
-def get_room_stats(room_code: str) -> Tuple[int, int]:
+def get_room_stats(room_code: str) -> Optional[Tuple[int, int]]:
     session = db_session.create_session()
     room = session.query(Room).filter(Room.code == room_code).first()
+    if not room:
+        session.close()
+        return None
     num_players = session.query(Player).filter(Player.room_code == room.code).count()
     session.close()
     return room.size, num_players
