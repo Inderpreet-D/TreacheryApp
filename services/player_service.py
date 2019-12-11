@@ -32,7 +32,10 @@ def get_player_by_id(player_id: int) -> Optional[Player]:
     return player
 
 
-def get_card():
+def get_player_from_cookie() -> Player:
     player_id = cookie_service.get_player_id_via_cookie(request)
-    player = get_player_by_id(player_id)
-    return player.card
+    return get_player_by_id(player_id)
+
+
+def get_card() -> str:
+    return get_player_from_cookie().card

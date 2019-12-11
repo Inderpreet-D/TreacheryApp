@@ -81,3 +81,26 @@ def extract_card_alt(card_path: str) -> str:
 def get_description(card_path: str) -> str:
     card_type = card_path.split('/')[0]
     return _DESC[card_type]
+
+
+def get_card_info(num_players: int) -> str:
+    info = '1 Leader, '
+
+    if num_players == 8:
+        info += '2 Traitors, '
+    else:
+        info += '1 Traitor, '
+
+    if num_players >= 6:
+        info += '3 Assassins, and '
+    else:
+        info += '2 Assassins, and '
+
+    if num_players == 4:
+        info += '0 Guardians'
+    elif num_players <= 6:
+        info += '1 Guardian'
+    else:
+        info += '2 Guardians'
+
+    return info

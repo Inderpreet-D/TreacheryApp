@@ -5,6 +5,7 @@ from typing import Optional, Tuple
 import data.db_session as db_session
 from data.player import Player
 from data.room import Room
+from services import player_service, card_service
 from services.card_service import get_cards
 
 
@@ -75,3 +76,9 @@ def add_player_to_room(player_id: int, room_code: str):
     session.add(room)
     session.commit()
     session.close()
+
+
+def get_room_info() -> str:
+    player = player_service.get_player_from_cookie()
+    size, _ = get_room_stats(player.room_code)
+    return card_service.get_card_info(size)
